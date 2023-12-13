@@ -28,7 +28,7 @@ for image_file in image_files:
     draw.text((x, y), str(idx)+text, font=font, fill=(255, 255, 255, 50), stroke_fill=(255, 140, 0,50), stroke_width=2)  
   
     # 保存带水印的图片文件  
-    output_file = os.path.join(image_folder, f'{image_file[:-4]}_watermarked.jpg')  
+    output_file = os.path.join(image_folder+"/out/", f'{str(idx)}.jpg')  
     image = image.convert('RGB')
 
     image.save(output_file)
